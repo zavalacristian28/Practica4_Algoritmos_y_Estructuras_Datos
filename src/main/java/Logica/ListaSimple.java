@@ -7,6 +7,10 @@ public class ListaSimple <T>{
         return inicio;
     }
 
+    public void setInicio(Nodo<T> inicio){
+        this.inicio=inicio;
+    }
+
 
     public void insertarInicio(T dato){
         Nodo <T> n= new Nodo<>(dato);

@@ -66,4 +66,18 @@ public class Mazo {
     public CartaInglesa darCarta(){
         return (CartaInglesa) LDC.eliminarFin();
     }
+
+    public int getLongitud() {
+        Nodo<Carta> inicio = LDC.getInicio();
+        if (inicio == null) return 0;
+
+        int cont = 0;
+        Nodo<Carta> actual = inicio;
+        do {
+            cont++;
+            actual = actual.getSig();
+        } while (actual != inicio);
+
+        return cont;
+    }
 }
